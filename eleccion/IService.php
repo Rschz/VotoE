@@ -1,8 +1,7 @@
 <?php
-interface ICiudadano
+interface IEleccion
 {
-    public function IsActive($DocId);
-    public function GetAll();
+    public function ActiveEleccion();
     public function GetById($id);
     public function Add($obj);
     public function Update($obj);

@@ -1,6 +1,6 @@
 <?php
 
-class CiudadanoService implements ICiudadano
+class EleccionService implements IEleccion
 {
     private $Context;
 
@@ -10,24 +10,20 @@ class CiudadanoService implements ICiudadano
     }
 
 
-    public function IsActive($docId)
+    public function ActiveEleccion()
     {
-        $stmt = $this->Context->Db->prepare("SELECT DocIdentidad from tb_ciudadano WHERE DocIdentidad = ? AND Estado = 1 LIMIT 1");
-        $stmt->bind_param('s', $docId);
+        $stmt = $this->Context->Db->prepare("SELECT * FROM `eleccion` WHERE Estado = 1 LIMIT 1");
         $stmt->execute();
         $resul = $stmt->get_result();
 
         if ($resul->num_rows === 0) {
-            $stmt->close();
             return false;
         } else {
-            $stmt->close();
-            return true;
+            $row =  $resul->fetch_object();
+            $eleccion = new Eleccion($row->Id,$row->Nombre,$row->FechaRealizacion,$row->Estado);
+            return $eleccion;
         }
-        
-    }
-    public function GetAll()
-    {
+        $stmt->close();
     }
     public function GetById($id)
     {

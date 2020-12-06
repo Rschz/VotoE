@@ -5,14 +5,35 @@ require_once('conexion/db_conexion.php');
 require_once('ciudadano/IService.php');
 require_once('ciudadano/service.php');
 require_once('ciudadano/ciudadano.php');
+require_once('eleccion/IService.php');
+require_once('eleccion/service.php');
+require_once('eleccion/eleccion.php');
+require_once('votacion/IService.php');
+require_once('votacion/service.php');
+
 
 
 $layout = new Layout();
 $ciudadanoServ = new CiudadanoService("conexion");
+$eleccionServ = new EleccionService("conexion");
+$votacionServ = new VotacionService("conexion");
+
+$eleccionActiva = $eleccionServ->ActiveEleccion();
+
+$msgWarning = "";
 
 
 if (isset($_POST['docId'])) {
-    echo $ciudadanoServ->Exist($_POST['docId']) ? "SI" : "NO";
+    $votacionServ->HaVotado($eleccionActiva->Id, $_POST['docId']);
+    if (!$eleccionActiva) {
+        $msgWarning = "No hay proceso electorar en estos momentos.";
+    } elseif ($votacionServ->HaVotado($eleccionActiva->Id, $_POST['docId'])) {
+        $msgWarning = "Ya ha ejercido su derecho al voto.";
+    } elseif (!$ciudadanoServ->IsActive($_POST['docId'])) {
+        $msgWarning = "No se encuentra activo.";
+    } else {
+        header("Location:../puesto/puestos.php");
+    }
 }
 
 
@@ -29,6 +50,14 @@ $layout->PrintHeader();
     </section>
     <div class="py-5 bg-light vh-100">
         <div class="container">
+            <?php if (!empty($msgWarning)): ?>
+                <div class="alert alert-warning alert-dismissible fade show w-50 m-auto" role="alert">
+                    <strong><?php echo $msgWarning;?></strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php endif; ?>
             <form action="index.php" method="POST">
                 <div class="form-group">
                     <label for="docId">Número de identificación </label>
