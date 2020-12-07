@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
 
 	if ($user) {
 		$_SESSION['user'] = json_encode($user);
-		header("Location:../index.php");
+		header("Location:../admin/");
 		exit();
 	} else {
 		$msg = "Datos invalidos o usuario no existe";
