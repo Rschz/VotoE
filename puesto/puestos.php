@@ -33,9 +33,7 @@ $layout->PrintHeader();
   <div class="container">
 
     <?php if (empty($puestos)) : ?>
-      <div class="text-center">
-        <h5>No hay resultados</h5>
-      </div>
+      <?php header("Location:../"); ?>
     <?php else : ?>
       <div class="p-2">
         <?php foreach ($puestos as $puesto) : ?>
