@@ -1,0 +1,11 @@
+
+13/11/2020 04:29:37 Se elimino transaccion ID 1
+13/11/2020 04:29:38 Se elimino transaccion ID 2
+13/11/2020 04:40:46 Se creo nueva transaccion
+07/12/2020 03:17:48 Se edito puesto ID 1
+07/12/2020 03:21:46 Se creo nuevo puesto
+07/12/2020 03:22:03 Se elimino puesto ID 1
+07/12/2020 03:22:04 Se elimino puesto ID 2
+07/12/2020 03:22:06 Se elimino puesto ID 3
+07/12/2020 03:38:44 Se edito puesto ID 1
+07/12/2020 03:39:33 Se edito puesto ID 1

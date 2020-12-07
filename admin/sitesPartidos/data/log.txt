@@ -1,0 +1,30 @@
+
+13/11/2020 04:29:37 Se elimino transaccion ID 1
+13/11/2020 04:29:38 Se elimino transaccion ID 2
+13/11/2020 04:40:46 Se creo nueva transaccion
+07/12/2020 02:54:08 Se creo nuevo partido
+07/12/2020 02:54:15 Se edito partido ID 0
+07/12/2020 02:55:00 Se edito partido ID 1
+07/12/2020 02:55:22 Se edito partido ID 1
+07/12/2020 02:56:04 Se edito partido ID 1
+07/12/2020 02:56:12 Se edito partido ID 1
+07/12/2020 02:56:46 Se edito partido ID 1
+07/12/2020 02:58:25 Se creo nuevo partido
+07/12/2020 02:58:32 Se creo nuevo partido
+07/12/2020 02:58:47 Se creo nuevo partido
+07/12/2020 02:58:53 Se creo nuevo partido
+07/12/2020 02:59:06 Se creo nuevo partido
+07/12/2020 02:59:14 Se creo nuevo partido
+07/12/2020 03:01:16 Se creo nuevo partido
+07/12/2020 03:02:40 Se creo nuevo partido
+07/12/2020 03:03:01 Se edito partido ID 0
+07/12/2020 03:03:06 Se edito partido ID 0
+07/12/2020 03:03:10 Se creo nuevo partido
+07/12/2020 03:03:15 Se elimino partido ID 0
+07/12/2020 03:03:25 Se creo nuevo partido
+07/12/2020 03:03:33 Se elimino partido ID 4
+07/12/2020 03:03:36 Se elimino partido ID 3
+07/12/2020 03:28:14 Se edito partido ID 2
+07/12/2020 03:28:20 Se edito partido ID 2
+07/12/2020 03:29:55 Se edito partido ID 2
+07/12/2020 08:14:51 Se creo nuevo partido

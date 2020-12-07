@@ -1,0 +1,117 @@
+
+13/11/2020 04:29:37 Se elimino transaccion ID 1
+13/11/2020 04:29:38 Se elimino transaccion ID 2
+13/11/2020 04:40:46 Se creo nueva transaccion
+07/12/2020 03:34:20 Se creo nueva ciudadano
+07/12/2020 03:34:35 Se elimino ciudadano ID 12345678911
+07/12/2020 03:36:11 Se creo nueva ciudadano
+07/12/2020 03:36:42 Se elimino ciudadano ID 12345678911
+07/12/2020 03:42:30 Se creo nueva ciudadano
+07/12/2020 03:46:29 Se elimino ciudadano ID 46377773873
+07/12/2020 03:46:32 Se elimino ciudadano ID 41325111184
+07/12/2020 03:46:34 Se elimino ciudadano ID 41438609087
+07/12/2020 03:46:35 Se elimino ciudadano ID 41654906540
+07/12/2020 03:46:37 Se elimino ciudadano ID 42028672885
+07/12/2020 03:46:39 Se elimino ciudadano ID 42091391602
+07/12/2020 03:46:40 Se elimino ciudadano ID 42290228690
+07/12/2020 03:46:42 Se elimino ciudadano ID 42494698323
+07/12/2020 03:46:44 Se elimino ciudadano ID 42535947157
+07/12/2020 03:46:45 Se elimino ciudadano ID 42543336637
+07/12/2020 03:46:47 Se elimino ciudadano ID 42586171913
+07/12/2020 03:46:48 Se elimino ciudadano ID 42586171913
+07/12/2020 03:46:49 Se elimino ciudadano ID 42586171913
+07/12/2020 03:46:50 Se elimino ciudadano ID 42664568312
+07/12/2020 03:46:51 Se elimino ciudadano ID 42750170114
+07/12/2020 03:46:52 Se elimino ciudadano ID 42875553205
+07/12/2020 03:46:53 Se elimino ciudadano ID 42974316676
+07/12/2020 03:46:54 Se elimino ciudadano ID 42990423867
+07/12/2020 03:46:55 Se elimino ciudadano ID 43095451471
+07/12/2020 03:46:56 Se elimino ciudadano ID 43106129471
+07/12/2020 03:46:57 Se elimino ciudadano ID 43462531258
+07/12/2020 03:46:57 Se elimino ciudadano ID 43587917489
+07/12/2020 03:46:58 Se elimino ciudadano ID 43623301939
+07/12/2020 03:46:59 Se elimino ciudadano ID 43672148840
+07/12/2020 03:47:00 Se elimino ciudadano ID 43692225924
+07/12/2020 03:47:01 Se elimino ciudadano ID 44013052641
+07/12/2020 03:47:02 Se elimino ciudadano ID 44185156575
+07/12/2020 03:47:02 Se elimino ciudadano ID 44461965082
+07/12/2020 03:47:03 Se elimino ciudadano ID 44508811592
+07/12/2020 03:47:04 Se elimino ciudadano ID 44713443726
+07/12/2020 03:47:04 Se elimino ciudadano ID 45107079549
+07/12/2020 03:47:05 Se elimino ciudadano ID 45117832157
+07/12/2020 03:47:07 Se elimino ciudadano ID 45141273389
+07/12/2020 03:47:07 Se elimino ciudadano ID 45251480265
+07/12/2020 03:47:08 Se elimino ciudadano ID 45428600878
+07/12/2020 03:47:09 Se elimino ciudadano ID 45496331309
+07/12/2020 03:47:10 Se elimino ciudadano ID 45971132496
+07/12/2020 03:47:11 Se elimino ciudadano ID 46122107771
+07/12/2020 03:47:12 Se elimino ciudadano ID 46289892762
+07/12/2020 03:47:12 Se elimino ciudadano ID 46490245385
+07/12/2020 03:47:13 Se elimino ciudadano ID 46553936811
+07/12/2020 03:47:14 Se elimino ciudadano ID 46678770151
+07/12/2020 03:47:15 Se elimino ciudadano ID 46864169640
+07/12/2020 03:47:16 Se elimino ciudadano ID 46864169640
+07/12/2020 03:47:17 Se elimino ciudadano ID 47016068867
+07/12/2020 03:47:18 Se elimino ciudadano ID 47043047492
+07/12/2020 03:47:19 Se elimino ciudadano ID 47050528331
+07/12/2020 03:47:20 Se elimino ciudadano ID 47281269508
+07/12/2020 03:47:20 Se elimino ciudadano ID 47285613240
+07/12/2020 03:47:21 Se elimino ciudadano ID 47327400077
+07/12/2020 03:47:23 Se elimino ciudadano ID 12345678911
+07/12/2020 03:47:24 Se elimino ciudadano ID 40085320420
+07/12/2020 03:47:25 Se elimino ciudadano ID 40138052521
+07/12/2020 03:47:26 Se elimino ciudadano ID 42586171913
+07/12/2020 03:47:30 Se creo nueva ciudadano
+07/12/2020 03:47:48 Se creo nueva ciudadano
+07/12/2020 03:48:24 Se creo nueva ciudadano
+07/12/2020 03:52:40 Se creo nueva ciudadano
+07/12/2020 03:56:47 Se creo nueva ciudadano
+07/12/2020 03:56:57 Se creo nueva ciudadano
+07/12/2020 03:57:01 Se elimino ciudadano ID 
+07/12/2020 03:57:04 Se creo nueva ciudadano
+07/12/2020 03:57:08 Se edito ciudadano ID 
+07/12/2020 03:57:50 Se elimino ciudadano ID 
+07/12/2020 03:57:53 Se creo nueva ciudadano
+07/12/2020 03:58:08 Se edito ciudadano ID 
+07/12/2020 03:59:55 Se edito ciudadano ID 
+07/12/2020 03:59:59 Se elimino ciudadano ID 
+07/12/2020 04:00:02 Se creo nueva ciudadano
+07/12/2020 04:00:38 Se creo nueva ciudadano
+07/12/2020 04:00:43 Se elimino ciudadano ID 
+07/12/2020 04:00:49 Se creo nueva ciudadano
+07/12/2020 04:01:09 Se creo nueva ciudadano
+07/12/2020 04:01:52 Se edito ciudadano ID 
+07/12/2020 04:03:09 Se creo nueva ciudadano
+07/12/2020 04:07:24 Se elimino ciudadano ID 
+07/12/2020 04:07:26 Se elimino ciudadano ID 
+07/12/2020 04:09:25 Se creo nueva ciudadano
+07/12/2020 04:09:31 Se edito ciudadano ID 
+07/12/2020 05:19:01 Se creo nueva ciudadano
+07/12/2020 05:19:09 Se elimino ciudadano ID 47050528331
+07/12/2020 05:19:14 Se elimino ciudadano ID 12345678911
+07/12/2020 05:19:16 Se elimino ciudadano ID 12345678911
+07/12/2020 05:19:20 Se elimino ciudadano ID 40085320420
+07/12/2020 05:19:37 Se elimino ciudadano ID 12345678911
+07/12/2020 05:19:40 Se elimino ciudadano ID 40085320420
+07/12/2020 05:19:43 Se edito ciudadano ID 12345678911
+07/12/2020 05:19:49 Se elimino ciudadano ID 12345678911
+07/12/2020 05:19:52 Se elimino ciudadano ID 40138052521
+07/12/2020 08:10:11 Se creo nueva ciudadano
+07/12/2020 08:10:39 Se edito ciudadano ID 
+07/12/2020 08:11:02 Se edito ciudadano ID 
+07/12/2020 08:15:27 Se creo nueva ciudadano
+07/12/2020 08:19:23 Se elimino ciudadano ID 
+07/12/2020 08:20:58 Se creo nueva ciudadano
+07/12/2020 08:33:39 Se edito ciudadano ID 12345654321
+07/12/2020 08:35:17 Se creo nueva ciudadano
+07/12/2020 08:36:18 Se creo nueva ciudadano
+07/12/2020 08:36:23 Se creo nueva ciudadano
+07/12/2020 08:36:30 Se creo nueva ciudadano
+07/12/2020 08:36:34 Se creo nueva ciudadano
+07/12/2020 08:38:38 Se creo nueva ciudadano
+07/12/2020 08:38:51 Se creo nueva ciudadano
+07/12/2020 08:40:07 Se creo nueva ciudadano
+07/12/2020 08:40:31 Se creo nueva ciudadano
+07/12/2020 08:40:37 Se creo nueva ciudadano
+07/12/2020 08:40:41 Se creo nueva ciudadano
+07/12/2020 08:40:55 Se creo nueva ciudadano
