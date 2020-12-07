@@ -32,7 +32,9 @@ if (isset($_POST['docId'])) {
     } elseif (!$ciudadanoServ->IsActive($_POST['docId'])) {
         $msgWarning = "No se encuentra activo.";
     } else {
-        header("Location:../puesto/puestos.php");
+        $_SESSION['userId'] =$_POST['docId'];
+        $_SESSION['eleccionId'] = $eleccionActiva->Id; 
+        header("Location:puesto/puestos.php");
     }
 }
 
