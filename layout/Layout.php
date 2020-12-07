@@ -25,17 +25,17 @@ class Layout
                 $this->PAGE_TITLE = "Inicio de sesión";
                 $this->css = '<link rel="stylesheet" type="text/css" href="' . $this->RELATIVE_ROOT_DIR . 'assets/css/login.css">';
                 break;
-            case "form_usuario.php":
+            case "puestos.php":
                 $this->RELATIVE_ROOT_DIR = "../";
-                $this->CURRENT_PAGE = "form_usuario";
-                $this->DESC_PAGE = "Registrate llenando este formulario";
-                $this->PAGE_TITLE = "Registro de usuario";
+                $this->CURRENT_PAGE = "puesto";
+                $this->DESC_PAGE = "Seleccione el puesto para elegir un candidato";
+                $this->PAGE_TITLE = "Puestos Electorales";
                 break;
-            case "amigos.php":
+            case "candidatos.php":
                 $this->RELATIVE_ROOT_DIR = "../";
-                $this->CURRENT_PAGE = "amigos";
-                $this->DESC_PAGE = "Aqui veo la actividad de mis amigos y los gestiono";
-                $this->PAGE_TITLE = "Mis Amigos";
+                $this->CURRENT_PAGE = "candidatos";
+                $this->DESC_PAGE = "Elegir candidato de su preferencia";
+                $this->PAGE_TITLE = "Cadidatos";
                 break;
             default:
                 $this->RELATIVE_ROOT_DIR = "";

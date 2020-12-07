@@ -8,15 +8,8 @@ class JsonHandler implements IFileHandler
     {
         $this->Directory = $directory;
         $this->Filename = $filename;
-        $this->CreateDirectory();
         
         
-    }
-    
-    function CreateDirectory(){
-        if (!file_exists($this->Directory)) {
-            mkdir($this->Directory,0777,true);
-        }
     }
 
 
