@@ -31,9 +31,10 @@ class CandidatoService implements ICandidato
     {
         $candidatos = array();
         $stmt = $this->Context->Db->prepare("
-        SELECT c.Id,c.Nombre,c.Apellido,p.Nombre AS Partido,c.Puesto,c.FotoPerfil,c.Estado
+        SELECT c.Id,c.Nombre,c.Apellido,p.Nombre AS Partido,p.LogoPartido,pe.Nombre AS Puesto,c.FotoPerfil,c.Estado
         FROM candidato c 
-        INNER JOIN partido p ON c.Partido = p.Id 
+        INNER JOIN partido p ON c.Partido = p.Id
+        INNER JOIN puestoelectivo pe ON c.Puesto = pe.Id 
         WHERE c.Puesto = ? AND c.Estado = 1
         ");
         $stmt->bind_param("s",$idPuesto);
@@ -45,7 +46,9 @@ class CandidatoService implements ICandidato
             return $candidatos;
         } else {
             while ($row = $resul->fetch_object()) {
-                $candidatos[] = new Candidato($row->Id, $row->Nombre, $row->Apellido,$row->Partido,$row->Puesto,$row->FotoPerfil, $row->Estado);
+                $candidato =new Candidato($row->Id, $row->Nombre, $row->Apellido,$row->Partido,$row->Puesto,$row->FotoPerfil, $row->Estado);
+                $candidato->Logo =$row->LogoPartido;
+                $candidatos[] = $candidato;
             }
             return $candidatos;
         }

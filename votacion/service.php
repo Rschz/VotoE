@@ -30,6 +30,11 @@ class VotacionService implements IVotacion
     }
     public function Add($obj)
     {
+        $stmt = $this->Context->Db->prepare("INSERT INTO `votacion` (`eleccion`, `ciudadano`, `candidato`, `puesto`) VALUES (?,?,?,?)");
+        $stmt->bind_param("ssss",$obj->Eleccion,$obj->Ciudadano,$obj->Candidato,$obj->Puesto);
+        $stmt->execute();
+        $stmt->close();
+
     }
     public function Update($obj)
     {
