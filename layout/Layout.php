@@ -77,15 +77,7 @@ class Layout
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <a class="navbar-brand" href="{$this->RELATIVE_ROOT_DIR}index.php">VotoE</a>
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="{$this->RELATIVE_ROOT_DIR}index.php">Inicio <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{$this->RELATIVE_ROOT_DIR}publicacion/amigos.php">Amigos</a>
-            </li>
-          </ul>
-          <div class="text-light"><b></b> <a href="usuario/logout.php" class="badge badge-dark">Iniciar Sesión</a></div>
+          <div class="text-light ml-auto"><b></b> <a href="usuario/logout.php" class="badge badge-dark">Cerrar Sesión</a></div>
         </div>
       </nav>
         </header>

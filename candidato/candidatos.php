@@ -27,7 +27,7 @@ if (isset($_GET['puesto'])) {
 
 if (isset($_POST['votar'])) {
 
-  $voto = new Votacion(0, $_SESSION['eleccionId'], $_SESSION['userId'], $_POST['candidato'], $_SESSION['puestoId']);
+  $voto = $_POST['candidato'] == 0 ? new Votacion(0, $_SESSION['eleccionId'], $_SESSION['userId'], null, $_SESSION['puestoId']) : new Votacion(0, $_SESSION['eleccionId'], $_SESSION['userId'], $_POST['candidato'], $_SESSION['puestoId']);
   $votacionServ->Add($voto);
   header("Location:../puesto/puestos.php");
 }
@@ -60,7 +60,7 @@ $layout->PrintHeader();
           <button type="submit" id="votar" name="votar" class="btn btn-primary btn-lg btn-block mb-5" disabled>Votar</button>
           <div class="candidatos row row-cols-1 row-cols-md-3">
             <div class="col mb-4 mt-4">
-              <input type="radio" name="candidato" id="candidato" value="">
+              <input type="radio" name="candidato" id="candidato" value="0">
               <div class="card h-100">
                 <img src="../assets/img/persona-incognita.jpg" class="card-img-top" alt="... FOTO PERFIL">
                 <div class="card-body">
