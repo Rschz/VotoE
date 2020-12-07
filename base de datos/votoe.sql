@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-12-2020 a las 02:03:37
+-- Tiempo de generación: 07-12-2020 a las 09:16:38
 -- Versión del servidor: 10.4.10-MariaDB
 -- Versión de PHP: 7.3.12
 
@@ -30,15 +30,14 @@ USE `votoe`;
 -- Estructura de tabla para la tabla `candidato`
 --
 
-DROP TABLE IF EXISTS `candidato`;
 CREATE TABLE `candidato` (
   `Id` int(11) NOT NULL,
-  `Nombre` varchar(80) NOT NULL,
-  `Apellido` varchar(80) NOT NULL,
+  `Nombre` varchar(80) DEFAULT NULL,
+  `Apellido` varchar(80) DEFAULT NULL,
   `Partido` int(11) NOT NULL,
   `Puesto` int(11) NOT NULL,
-  `FotoPerfil` text NOT NULL,
-  `Estado` tinyint(1) NOT NULL
+  `FotoPerfil` text DEFAULT NULL,
+  `Estado` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -46,21 +45,18 @@ CREATE TABLE `candidato` (
 --
 
 INSERT INTO `candidato` (`Id`, `Nombre`, `Apellido`, `Partido`, `Puesto`, `FotoPerfil`, `Estado`) VALUES
-(1, 'Germaine', 'Bergstram', 1, 4, '/nunc/rhoncus/dui.png', 1),
-(2, 'Germaine', 'Bergstram', 1, 4, '/nunc/rhoncus/dui.png', 1),
-(3, 'Davey', 'Corain', 2, 2, '/morbi/odio/odio/elementum/eu/interdum/eu.jpg', 0),
-(4, 'Davina', 'Pogosian', 2, 1, '/eleifend/pede/libero/quis.aspx', 0),
-(5, 'Barry', 'Charopen', 2, 2, '/metus/aenean/fermentum/donec/ut/mauris/eget.png', 1),
-(6, 'Denice', 'Demsey', 3, 1, '/ipsum/dolor/sit/amet/consectetuer/adipiscing/elit.png', 1),
-(7, 'Jonell', 'McKaile', 4, 3, '/duis/at/velit.js', 0),
-(8, 'Nehemiah', 'Kempstone', 4, 1, '/integer/ac/leo/pellentesque/ultrices/mattis/odio.png', 1),
-(9, 'Britteny', 'McMenamin', 3, 4, '/massa/donec/dapibus/duis.jpg', 1),
-(10, 'Nicko', 'Chadburn', 3, 4, '/at/dolor/quis/odio.json', 1),
-(11, 'Harlene', 'Walthall', 3, 4, '/id/massa/id/nisl.jsp', 1),
-(12, 'Olivia', 'Charlon', 4, 1, '/morbi/vel/lectus/in/quam/fringilla.jsp', 0),
-(13, 'Rollin', 'Skahill', 2, 3, '/non/velit/nec.png', 1),
-(14, 'Templeton', 'Glyde', 4, 3, '/metus.png', 1),
-(15, 'Maje', 'Diviny', 1, 1, '/nibh/fusce/lacus/purus/aliquet.json', 0);
+(4, 'Davina', 'Pogosian', 2, 1, 'assets/img/persona-incognita.jpg', 0),
+(5, 'Barry', 'Charopen', 2, 2, 'assets/img/persona-incognita.jpg', 1),
+(6, 'Denice', 'Demsey', 3, 1, 'assets/img/persona-incognita.jpg', 1),
+(7, 'Jonell', 'McKaile', 4, 3, 'assets/img/persona-incognita.jpg', 0),
+(8, 'Nehemiah', 'Kempstone', 4, 1, 'assets/img/persona-incognita.jpg', 1),
+(9, 'Britteny', 'McMenamin', 3, 4, 'assets/img/persona-incognita.jpg', 1),
+(10, 'Nicko', 'Chadburn', 3, 4, 'assets/img/persona-incognita.jpg', 1),
+(11, 'Harlene', 'Walthall', 3, 4, 'assets/img/persona-incognita.jpg', 1),
+(12, 'Olivia', 'Charlon', 4, 1, 'assets/img/persona-incognita.jpg', 0),
+(13, 'Rollin', 'Skahill', 2, 3, 'assets/img/persona-incognita.jpg', 1),
+(14, 'Templeton', 'Glyde', 4, 3, 'assets/img/persona-incognita.jpg', 1),
+(15, 'Majej', 'Diviny', 1, 1, 'assets/img/persona-incognita.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -68,12 +64,11 @@ INSERT INTO `candidato` (`Id`, `Nombre`, `Apellido`, `Partido`, `Puesto`, `FotoP
 -- Estructura de tabla para la tabla `eleccion`
 --
 
-DROP TABLE IF EXISTS `eleccion`;
 CREATE TABLE `eleccion` (
   `Id` int(11) NOT NULL,
   `Nombre` varchar(80) NOT NULL,
   `FechaRealizacion` varchar(20) NOT NULL,
-  `Estado` tinyint(1) NOT NULL
+  `Estado` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -90,13 +85,12 @@ INSERT INTO `eleccion` (`Id`, `Nombre`, `FechaRealizacion`, `Estado`) VALUES
 -- Estructura de tabla para la tabla `partido`
 --
 
-DROP TABLE IF EXISTS `partido`;
 CREATE TABLE `partido` (
   `Id` int(11) NOT NULL,
   `Nombre` varchar(80) NOT NULL,
   `Descripcion` varchar(200) NOT NULL,
-  `LogoPartido` text NOT NULL,
-  `Estado` tinyint(1) NOT NULL
+  `LogoPartido` text DEFAULT NULL,
+  `Estado` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -104,10 +98,10 @@ CREATE TABLE `partido` (
 --
 
 INSERT INTO `partido` (`Id`, `Nombre`, `Descripcion`, `LogoPartido`, `Estado`) VALUES
-(1, 'PRD', 'Partido Revolucionario Dominicano', '/fakeimage/img.jpg', 1),
-(2, 'PLD', 'Partido de la Liberación Dominicana', '/fakeimage/img.jpg', 0),
-(3, 'PRSC', 'Partido Reformista Social Cristiano', '/fakeimage/img.jpg', 1),
-(4, 'PRM', 'Partido Revolucionario Moderno', '/fakeimage/img.jpg', 1);
+(1, 'PRD', 'Partido Revolucionario Dominicano', 'prd.png', 1),
+(2, 'PLD', 'Partido de la Liberación Dominicana', 'pld.png', 1),
+(3, 'PRSC', 'Partido Reformista Social Cristiano', 'prsc.png', 1),
+(4, 'PRM', 'Partido Revolucionario Moderno', 'prm.png', 1);
 
 -- --------------------------------------------------------
 
@@ -115,12 +109,11 @@ INSERT INTO `partido` (`Id`, `Nombre`, `Descripcion`, `LogoPartido`, `Estado`) V
 -- Estructura de tabla para la tabla `puestoelectivo`
 --
 
-DROP TABLE IF EXISTS `puestoelectivo`;
 CREATE TABLE `puestoelectivo` (
   `Id` int(11) NOT NULL,
   `Nombre` varchar(50) NOT NULL,
   `Descripcion` varchar(200) NOT NULL,
-  `Estado` tinyint(1) NOT NULL
+  `Estado` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -139,13 +132,12 @@ INSERT INTO `puestoelectivo` (`Id`, `Nombre`, `Descripcion`, `Estado`) VALUES
 -- Estructura de tabla para la tabla `tb_ciudadano`
 --
 
-DROP TABLE IF EXISTS `tb_ciudadano`;
 CREATE TABLE `tb_ciudadano` (
   `DocIdentidad` char(11) NOT NULL,
   `Nombre` varchar(80) NOT NULL,
   `Apellido` varchar(80) NOT NULL,
   `Email` varchar(150) NOT NULL,
-  `Estado` tinyint(1) NOT NULL
+  `Estado` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -153,9 +145,12 @@ CREATE TABLE `tb_ciudadano` (
 --
 
 INSERT INTO `tb_ciudadano` (`DocIdentidad`, `Nombre`, `Apellido`, `Email`, `Estado`) VALUES
-('12345678911', 'Mario', 'Cimarro', 'mcimarro@ejemplo.com', 1),
+('12345654321', 'adadda', 'ddfdfd', 'dsds@dad.es', 1),
+('12345654327', 'adadda', 'ddfdfd', 'dsds@dad.es', 1),
+('12345678911', 'Mario', 'Cimarro', 'mcimarro@ejemplo.com', 0),
+('14123585478', 'dadaddad', 'dfdfdf', 'sdfdfd', 1),
+('22345654327', 'adadda', 'ddfdfd', 'dsds@dad.es', 0),
 ('40085320420', 'Alano', 'Priestnall', 'apriestnallj@state.tx.us', 1),
-('40138052521', 'Jen', 'Olphert', 'jolphertp@washingtonpost.com', 0),
 ('41325111184', 'Kass', 'Burnell', 'kburnelli@furl.net', 0),
 ('41438609087', 'Vernen', 'Jepensen', 'vjepensen11@123-reg.co.uk', 0),
 ('41648093074', 'Joshuah', 'Chattington', 'jchattingtonb@storify.com', 0),
@@ -171,7 +166,7 @@ INSERT INTO `tb_ciudadano` (`DocIdentidad`, `Nombre`, `Apellido`, `Email`, `Esta
 ('42750170114', 'Anetta', 'Yuryshev', 'ayuryshevw@php.net', 1),
 ('42875553205', 'Anny', 'Woolfitt', 'awoolfitta@sogou.com', 0),
 ('42974316676', 'Cordi', 'Grainger', 'cgrainger13@earthlink.net', 0),
-('42990423867', 'Bertram', 'Phoenix', 'bphoenixn@ca.gov', 0),
+('42990423867', 'Bertram', 'Phoenix', 'bphoenixn@ca.gov', 1),
 ('43095451471', 'Woody', 'Maas', 'wmaasv@digg.com', 1),
 ('43106129471', 'Ramonda', 'Florey', 'rfloreyh@arstechnica.com', 0),
 ('43462531258', 'Abelard', 'Naden', 'anadenl@nytimes.com', 0),
@@ -200,10 +195,8 @@ INSERT INTO `tb_ciudadano` (`DocIdentidad`, `Nombre`, `Apellido`, `Email`, `Esta
 ('46864169640', 'Georgie', 'Dronsfield', 'gdronsfieldk@jigsy.com', 1),
 ('47016068867', 'Elna', 'Laird-Craig', 'elairdcraig15@topsy.com', 1),
 ('47043047492', 'Mareah', 'Laxton', 'mlaxtond@google.com.hk', 0),
-('47050528331', 'Nadine', 'Raecroft', 'nraecroftc@globo.com', 1),
 ('47281269508', 'Gayel', 'Bart', 'gbart9@flickr.com', 1),
-('47285613240', 'Walther', 'Durrad', 'wdurrads@ovh.net', 0),
-('47327400077', 'Oliy', 'Chantler', 'ochantlery@vk.com', 0);
+('47285613240', 'Walther', 'Durrad', 'wdurrads@ovh.net', 0);
 
 -- --------------------------------------------------------
 
@@ -211,7 +204,6 @@ INSERT INTO `tb_ciudadano` (`DocIdentidad`, `Nombre`, `Apellido`, `Email`, `Esta
 -- Estructura de tabla para la tabla `usuario`
 --
 
-DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
@@ -239,12 +231,11 @@ INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `telefono`, `correo`, `usuari
 -- Estructura de tabla para la tabla `votacion`
 --
 
-DROP TABLE IF EXISTS `votacion`;
 CREATE TABLE `votacion` (
   `id` int(11) NOT NULL,
   `eleccion` int(11) NOT NULL,
   `ciudadano` char(11) NOT NULL,
-  `candidato` int(11) NOT NULL,
+  `candidato` int(11) DEFAULT NULL,
   `puesto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -256,7 +247,16 @@ INSERT INTO `votacion` (`id`, `eleccion`, `ciudadano`, `candidato`, `puesto`) VA
 (1, 2, '40085320420', 15, 1),
 (2, 2, '42586171913', 5, 2),
 (3, 2, '12345678911', 7, 3),
-(4, 2, '46864169640', 11, 4);
+(4, 2, '46864169640', 11, 4),
+(5, 2, '43692225924', 8, 1),
+(6, 2, '43692225924', 13, 3),
+(7, 2, '43692225924', 9, 4),
+(8, 2, '43692225924', 5, 2),
+(9, 2, '42494698323', 6, 1),
+(10, 2, '42494698323', 14, 3),
+(11, 2, '42494698323', 5, 2),
+(12, 2, '42494698323', 11, 4),
+(14, 2, '42990423867', NULL, 1);
 
 --
 -- Índices para tablas volcadas
@@ -318,13 +318,19 @@ ALTER TABLE `votacion`
 -- AUTO_INCREMENT de la tabla `candidato`
 --
 ALTER TABLE `candidato`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT de la tabla `eleccion`
 --
 ALTER TABLE `eleccion`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `partido`
+--
+ALTER TABLE `partido`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `puestoelectivo`
@@ -342,7 +348,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `votacion`
 --
 ALTER TABLE `votacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Restricciones para tablas volcadas
